@@ -1,0 +1,20 @@
+<h1>Favorite Movies</h1>
+
+<table>
+<% @movies.each do |movie| %>
+  <tr>
+    <td><%= movie.name %></td>
+    <td><%= link_to 'Info', movie_path(movie) %></td>
+    <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+    <td><%= link_to 'Destroy', movie_path(movie),
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+<br/>
+
+
+<button><%= link_to 'Add new movie', '/movies/new' %></button>
+<br />
+<button><%= link_to 'See favorite books', '/books' %></button>

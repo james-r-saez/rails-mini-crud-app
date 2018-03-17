@@ -1,0 +1,6 @@
+<p> Name: <%=@book[:name]%> </p>
+<p> Author: <%=@book[:author]%> </p>
+<p> Year Released:<%=@book[:year_released]%> </p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>

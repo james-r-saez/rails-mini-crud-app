@@ -1,0 +1,18 @@
+<p>Add new book</p>
+
+<%= form_for @book, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+
+  <%= f.label :name %>: <br />
+  <%= f.text_field :name %> <br />
+
+  <%= f.label :author %>: <br />
+  <%= f.text_field :author %> <br />
+
+  <%= f.label :year_released %>: <br />
+  <%= f.text_field :year_released  %> <br />
+
+  <%= f.submit "Create book" %>
+<% end %>
+<br/>
+
+<button><%= link_to 'Back', :back %></button>

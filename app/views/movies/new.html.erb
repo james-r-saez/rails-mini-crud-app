@@ -1,0 +1,18 @@
+<p>Add new movie</p>
+
+<%= form_for @movie, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+
+  <%= f.label :name %>: <br />
+  <%= f.text_field :name %> <br />
+
+  <%= f.label :director %>: <br />
+  <%= f.text_field :director %> <br />
+
+  <%= f.label :year_released %>: <br />
+  <%= f.text_field :year_released  %> <br />
+
+  <%= f.submit "Create movie" %>
+<% end %>
+<br/>
+
+<button><%= link_to 'Back', :back %></button>
